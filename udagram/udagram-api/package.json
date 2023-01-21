@@ -8,12 +8,12 @@
   "main": "server.ts",
   "scripts": {
     "start": "node ./www/server.js",
-    "tsc": "npx tsc --skipLibCheck",
+    "tsc": "npx tsc --skipLibCheck --skipLibCheck",
     "dev": "npx ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
-    "build": "npm install . && npm run clean && npm run tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www",
+    "build": "npm install . && npm run clean && npm run npm run tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
