@@ -67,9 +67,7 @@ jobs:
       - run:
           name: Deploy FrontEnd
           command: |
-            pwd
-            ls
-            cd www/ && eb setenv POSTGRES_HOST=$POSTGRES_HOST
+            cd udagram/udagram-api/ && eb setenv POSTGRES_HOST=$POSTGRES_HOST
             npm run frontend:deploy
 
 
