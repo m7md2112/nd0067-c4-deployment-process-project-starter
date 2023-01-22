@@ -60,23 +60,19 @@ jobs:
       - aws-cli/setup
       - checkout
       - run:
-          name: Deploy App
+          name: Deploy BackEnd
           command: |
-            npm run deploy
+            eb use $EB_ENV_NAME
+            npm run api:deploy
+
+      - run:
+          name: Deploy FrontEnd
+          command: |
+            npm run frontend:deploy
 
 
 workflows:
   udagram:
     jobs:
-      - build
-      - hold:
-          filters:
-            branches:
-              only:
-                - master
-          type: approval
-          requires:
-            - build
-      - deploy:
-          requires:
-            - hold
+      - deploy
+
