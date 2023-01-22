@@ -62,7 +62,6 @@ jobs:
       - run:
           name: Deploy BackEnd
           command: |
-            eb use $EB_ENV_NAME
             npm run api:deploy
 
       - run:
