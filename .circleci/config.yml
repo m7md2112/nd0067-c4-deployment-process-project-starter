@@ -67,6 +67,7 @@ jobs:
       - run:
           name: Deploy FrontEnd
           command: |
+            eb setenv POSTGRES_HOST=$POSTGRES_HOST
             npm run frontend:deploy
 
 
