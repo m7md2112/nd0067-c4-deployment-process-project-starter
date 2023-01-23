@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/m7md2112/nd0067-c4-deployment-process-project-starter.svg?style=shield&circle-token=5bd11a6d8e6910b324b1cd87d3177d101478ed04)](<http://udagram-www-754987897.s3-website-us-east-1.amazonaws.com/>)
+
 # Hosting a Full-Stack Application
 
 ### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
